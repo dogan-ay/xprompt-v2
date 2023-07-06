@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
-
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -24,15 +23,13 @@ module.exports = {
           400: '#D8ECFF',
           300: '#EFF1F3',
           200: '#F5F5F5',
-        }
+        },
       },
-      
     },
 
-   
     fontFamily: {
-      'sans': ['PT Sans','Helvetica', 'Arial', 'sans-serif']
-    }
+      sans: ['PT Sans', 'Helvetica', 'Arial', 'sans-serif'],
+    },
   },
-  plugins: [],
-}
+  plugins: [require('tailwind-scrollbar')],
+};

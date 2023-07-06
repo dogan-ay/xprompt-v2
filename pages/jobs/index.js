@@ -17,6 +17,18 @@ const jobs = () => {
     {
       id: 4,
     },
+    {
+      id: 5,
+    },
+    {
+      id: 6,
+    },
+    {
+      id: 7,
+    },
+    {
+      id: 8,
+    },
   ];
 
   return (
@@ -24,20 +36,12 @@ const jobs = () => {
       <div className="container mx-auto">
         <div className="xl:mx-20 mx-4 sm:mx-0">
           <section className="flex flex-column w-full rounded-2xl my-10 overflow-hidden   shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            <div className="bg-red-500 w-full sm:w-1/2 h-[300px] hidden sm:block">
-              merhaba
-            </div>
-            <div
-              className={`${
-                isShowJob ? 'block sm:hidden' : 'hidden'
-              } bg-red-500 w-full sm:w-1/2 h-[300px]`}
-            >
-              merhaba
-            </div>
             <div
               className={`${
                 isShowJob ? 'hidden sm:flex flex-col' : 'flex flex-col'
-              } bg-white w-full sm:w-1/2 border-l border-gray-200`}
+              } bg-white w-full sm:w-1/2 border-l border-gray-200 sm:max-h-[90vh] sm:overflow-y-scroll 
+              scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-slate-50
+              `}
             >
               {fakeData.map((item) => (
                 <div
@@ -50,6 +54,21 @@ const jobs = () => {
                   <PageJobCard />
                 </div>
               ))}
+            </div>
+            <div
+              className="bg-white w-full sm:w-1/2  hidden sm:block
+            sm:max-h-[90vh] sm:overflow-y-scroll overflow-x-hidden
+            scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-slate-50
+            "
+            >
+              merhaba
+            </div>
+            <div
+              className={`${
+                isShowJob ? 'block sm:hidden' : 'hidden'
+              } bg-red-500 w-full`}
+            >
+              merhaba
             </div>
           </section>
         </div>
