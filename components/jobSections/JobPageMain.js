@@ -2,17 +2,12 @@ import PageJobCard from '@/components/PageJobCard';
 import { React, useState, useContext, useEffect } from 'react';
 import Link from 'next/link';
 import { JobContext, JobContextProvider } from '@/contexts/JobContext';
-import { useWindowSize } from '@uidotdev/usehooks';
+import JobMobile from '../jobSections/JobMobile';
+import JobWeb from '../jobSections/JobWeb';
 
 const JobPageMain = () => {
-  const [isShowJob, setIsShowJob] = useState(false);
-  const { updateCurrentJob, currentJob } = useContext(JobContext);
-  const sizeWidth = useWindowSize();
-  const [size, setSize] = useState(sizeWidth);
-  const [isMobile, setIsMobile] = useState();
-  const handleSize = (size) => {
-    size.width < 640 ? setIsMobile(true) : setIsMobile(false);
-  };
+  const { updateCurrentJob, currentJob, isMobile, isShowJob, updateShowJob } = useContext(JobContext);
+
   const fakeData = [
     {
       id: 1,
@@ -39,9 +34,8 @@ const JobPageMain = () => {
       id: 8,
     },
   ];
-  useEffect(() => {
-    handleSize(size);
-  }, [size]);
+
+
   return (
     <>
       <div className="container mx-auto">
@@ -60,14 +54,14 @@ const JobPageMain = () => {
                   id={item.id}
                   onClick={() => {
                     updateCurrentJob(item.id);
-                    setIsShowJob(true);
+                    updateShowJob(true);
                   }}
                 >
                   <PageJobCard />
                 </div>
               ))}
-              {isMobile ? <p>mobile calıstı test 123</p> : <p>web calıstı</p>}
             </div>
+            {isMobile ? <JobMobile/> : <JobWeb/>}
           </section>
         </div>
       </div>

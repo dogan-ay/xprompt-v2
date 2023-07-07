@@ -1,5 +1,9 @@
 import Link from 'next/link';
+import { useContext } from 'react';
+import { JobContext } from '@/contexts/JobContext';
+
 export default function JobMobile() {
+  const { isShowJob, updateShowJob, currentJob } = useContext(JobContext);
   return (
     <div
       className={`${
@@ -16,7 +20,7 @@ export default function JobMobile() {
           <div
             className="flex items-center cursor-pointer"
             onClick={() => {
-              setIsShowJob(false);
+              updateShowJob(false);
             }}
           >
             <div className="w-8 h-8">
