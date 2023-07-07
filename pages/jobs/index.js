@@ -1,11 +1,11 @@
 import PageJobCard from '@/components/PageJobCard';
-import { React, useState, useContext } from 'react';
+import { React, useState, useContext, useEffect } from 'react';
 import Link from 'next/link';
 import { JobContext, JobContextProvider } from '@/contexts/JobContext';
 
 const jobs = () => {
   const [isShowJob, setIsShowJob] = useState(false);
-  const setJob = useContext(JobContext);
+  const { updateCurrentJob, currentJob } = useContext(JobContext);
   const fakeData = [
     {
       id: 1,
@@ -32,7 +32,7 @@ const jobs = () => {
       id: 8,
     },
   ];
-
+  useEffect(() => {});
   return (
     <>
       <div className="container mx-auto">
@@ -50,7 +50,7 @@ const jobs = () => {
                   key={item.id}
                   id={item.id}
                   onClick={() => {
-                    setJob(item.id);
+                    updateCurrentJob(item.id);
                     setIsShowJob(true);
                   }}
                 >

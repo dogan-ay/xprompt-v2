@@ -4,12 +4,10 @@ const JobContext = createContext('');
 
 const JobContextProvider = ({ children }) => {
   const [currentJob, setCurrentJob] = useState('merhaba');
-  const setJob = (item) => setCurrentJob(item);
-  const testF = () => console.log('test');
+  const updateCurrentJob = (item) => setCurrentJob(item);
   const contextValue = {
     currentJob,
-    setJob,
-    testF,
+    updateCurrentJob,
   };
 
   return (
