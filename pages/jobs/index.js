@@ -1,9 +1,11 @@
 import PageJobCard from '@/components/PageJobCard';
-import { React, useState } from 'react';
+import { React, useState, useContext } from 'react';
+import Link from 'next/link';
+import { JobContext, JobContextProvider } from '@/contexts/JobContext';
+
 const jobs = () => {
   const [isShowJob, setIsShowJob] = useState(false);
-  const [currentJob, setCurrentJob] = useState();
-
+  const { updateCurrentJob, currentJob } = useContext(JobContext);
   const fakeData = [
     {
       id: 1,
@@ -32,7 +34,7 @@ const jobs = () => {
   ];
 
   return (
-    <>
+    <JobContextProvider>
       <div className="container mx-auto">
         <div className="xl:mx-20 mx-4 sm:mx-0">
           <section className="flex flex-column w-full rounded-2xl my-10 overflow-hidden   shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
@@ -46,8 +48,10 @@ const jobs = () => {
               {fakeData.map((item) => (
                 <div
                   key={item.id}
+                  id={item.id}
                   onClick={() => {
-                    setCurrentJob(item.id);
+                    console.log(updateCurrentJob);
+                    updateCurrentJob(item);
                     setIsShowJob(true);
                   }}
                 >
@@ -63,17 +67,10 @@ const jobs = () => {
             >
               merhaba
             </div>
-            <div
-              className={`${
-                isShowJob ? 'block sm:hidden' : 'hidden'
-              } bg-red-500 w-full`}
-            >
-              merhaba
-            </div>
           </section>
         </div>
       </div>
-    </>
+    </JobContextProvider>
   );
 };
 
