@@ -7,6 +7,9 @@ const JobContextProvider = ({ children }) => {
   const [currentJob, setCurrentJob] = useState('merhaba');
   const [isShowJob, setIsShowJob] = useState(false);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const updateMenu = () => setIsMenuOpen(!isMenuOpen);
+
   const updateCurrentJob = (item) => setCurrentJob(item);
   const updateShowJob = (arg) => setIsShowJob(arg);
 
@@ -21,6 +24,8 @@ const JobContextProvider = ({ children }) => {
     isMobile,
     isShowJob,
     updateShowJob,
+    updateMenu,
+    isMenuOpen,
   };
 
   useEffect(() => {

@@ -1,8 +1,8 @@
-import { React, useState } from 'react';
+import { React, useState, useContext } from 'react';
+import { JobContext } from '@/contexts/JobContext';
 import Button from './Button';
 const Nav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { isMenuOpen, updateMenu } = useContext(JobContext);
   return (
     <div className="bg-slate-950">
       <header className="container mx-auto">
@@ -23,7 +23,7 @@ const Nav = () => {
             </Button>
             <button
               class="block rounded bg-[#020625] p-2.5 text-xcolor-100 transition sm:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => updateMenu()}
             >
               <span class="sr-only">Toggle menu</span>
               <svg
@@ -44,7 +44,7 @@ const Nav = () => {
           </span>
         </nav>
         <div
-          className={`absolute left-0 transition h-full w-full bg-[#020620]`}
+          className={`absolute  left-0 transition h-full w-full bg-[#020620]`}
         >
           {isMenuOpen ? 'acık' : 'kapalı'}
         </div>
