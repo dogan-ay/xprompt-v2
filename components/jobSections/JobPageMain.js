@@ -2,10 +2,16 @@ import PageJobCard from '@/components/PageJobCard';
 import { React, useState, useContext, useEffect } from 'react';
 import Link from 'next/link';
 import { JobContext, JobContextProvider } from '@/contexts/JobContext';
+import { useWindowSize } from '@uidotdev/usehooks';
 
 const JobPageMain = () => {
   const [isShowJob, setIsShowJob] = useState(false);
   const { updateCurrentJob, currentJob } = useContext(JobContext);
+  const size = useWindowSize();
+  const [isMobile, setIsMobile] = useState();
+  const handleSize = (size) => {
+    size.width < 640 ? setIsMobile(true) : setIsMobile(false);
+  };
   const fakeData = [
     {
       id: 1,
@@ -32,7 +38,9 @@ const JobPageMain = () => {
       id: 8,
     },
   ];
-  useEffect(() => {});
+  useEffect(() => {
+    handleSize(size);
+  });
   return (
     <>
       <div className="container mx-auto">
@@ -57,6 +65,7 @@ const JobPageMain = () => {
                   <PageJobCard />
                 </div>
               ))}
+              {isMobile ? <p>mobile calıstı test 123</p> : <p>web calıstı</p>}
             </div>
           </section>
         </div>
