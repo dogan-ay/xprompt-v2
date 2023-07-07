@@ -7,7 +7,8 @@ import { useWindowSize } from '@uidotdev/usehooks';
 const JobPageMain = () => {
   const [isShowJob, setIsShowJob] = useState(false);
   const { updateCurrentJob, currentJob } = useContext(JobContext);
-  const size = useWindowSize();
+  const sizeWidth = useWindowSize();
+  const [size, setSize] = useState(sizeWidth);
   const [isMobile, setIsMobile] = useState();
   const handleSize = (size) => {
     size.width < 640 ? setIsMobile(true) : setIsMobile(false);
@@ -40,7 +41,7 @@ const JobPageMain = () => {
   ];
   useEffect(() => {
     handleSize(size);
-  });
+  }, [size]);
   return (
     <>
       <div className="container mx-auto">
