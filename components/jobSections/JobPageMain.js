@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { JobContext, JobContextProvider } from '@/contexts/JobContext';
 import JobMobile from '../jobSections/JobMobile';
 import JobWeb from '../jobSections/JobWeb';
+import { useRouter } from 'next/router';
 
 const JobPageMain = () => {
-  const { updateCurrentJob, currentJob, isMobile, isShowJob, updateShowJob } = useContext(JobContext);
+  const { updateCurrentJob, currentJob, isMobile, isShowJob, updateShowJob } =
+    useContext(JobContext);
 
   const fakeData = [
     {
@@ -34,8 +36,10 @@ const JobPageMain = () => {
       id: 8,
     },
   ];
-
-
+  const route = useRouter();
+  useEffect(() => {
+    console.log(route);
+  });
   return (
     <>
       <div className="container mx-auto">
@@ -49,19 +53,20 @@ const JobPageMain = () => {
               `}
             >
               {fakeData.map((item) => (
-                <div
-                  key={item.id}
-                  id={item.id}
+                <Link
+                  href={`/jobs/${item.id}`}
                   onClick={() => {
                     updateCurrentJob(item.id);
                     updateShowJob(true);
                   }}
                 >
-                  <PageJobCard />
-                </div>
+                  <div key={item.id} id={item.id}>
+                    <PageJobCard />
+                  </div>
+                </Link>
               ))}
             </div>
-            {isMobile ? <JobMobile/> : <JobWeb/>}
+            {isMobile ? <JobMobile /> : <JobWeb />}
           </section>
         </div>
       </div>
