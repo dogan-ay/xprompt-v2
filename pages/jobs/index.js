@@ -5,7 +5,7 @@ import { JobContext, JobContextProvider } from '@/contexts/JobContext';
 
 const jobs = () => {
   const [isShowJob, setIsShowJob] = useState(false);
-  const { updateCurrentJob, currentJob } = useContext(JobContext);
+  const setJob = useContext(JobContext);
   const fakeData = [
     {
       id: 1,
@@ -34,7 +34,7 @@ const jobs = () => {
   ];
 
   return (
-    <JobContextProvider>
+    <>
       <div className="container mx-auto">
         <div className="xl:mx-20 mx-4 sm:mx-0">
           <section className="flex flex-column w-full rounded-2xl my-10 overflow-hidden   shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
@@ -50,8 +50,7 @@ const jobs = () => {
                   key={item.id}
                   id={item.id}
                   onClick={() => {
-                    console.log(updateCurrentJob);
-                    updateCurrentJob(item);
+                    setJob(item.id);
                     setIsShowJob(true);
                   }}
                 >
@@ -70,7 +69,7 @@ const jobs = () => {
           </section>
         </div>
       </div>
-    </JobContextProvider>
+    </>
   );
 };
 
