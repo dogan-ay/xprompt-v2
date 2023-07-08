@@ -7,7 +7,7 @@ const MenuButton = () => {
   return (
     <button
       className="block rounded bg-[#020625] p-2 text-xcolor-100 transition sm:hidden"
-      onClick={updateMenu}
+      onClick={() => updateMenu()}
     >
       {isMenuOpen ? (
         <svg
@@ -18,17 +18,17 @@ const MenuButton = () => {
           fill="none"
           className="h-5 w-5 p-[2px]"
         >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
           <g
             id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             {' '}
             <path
               fill="currentColor"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M16.293 17.707a1 1 0 001.414-1.414L11.414 10l6.293-6.293a1 1 0 00-1.414-1.414L10 8.586 3.707 2.293a1 1 0 00-1.414 1.414L8.586 10l-6.293 6.293a1 1 0 101.414 1.414L10 11.414l6.293 6.293z"
             ></path>{' '}
           </g>
