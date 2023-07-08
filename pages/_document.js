@@ -1,6 +1,4 @@
-import Nav from '@/components/Nav';
-import Footer from '@/components/sections/Footer';
-import { JobContextProvider } from '@/contexts/JobContext';
+
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
@@ -8,10 +6,8 @@ export default function Document() {
       <Html lang="en">
         <Head />
         <body className="bg-xcolor-200">
-          <Nav /> 
           <Main />
           <NextScript />
-          <Footer />
         </body>
       </Html>
   );
