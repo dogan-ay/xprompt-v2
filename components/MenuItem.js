@@ -8,13 +8,13 @@ export default function MenuItem(props) {
       <span
         className={`${
           isActive
-            ? 'text-white bg-opacity-15 border-slate-400 bg-slate-500'
-            : 'text-slate-900 bg-slate-200 '
-        }  font-semibold flex justify-between items-center py-2 pl-4 pr-6 m-2 rounded-xl  bg-opacity-25  backdrop-filter backdrop-blur border border-slate-300`}
+            ? 'text-white bg-opacity-40 border-slate-400 bg-slate-600'
+            : 'text-black bg-slate-300 '
+        }  font-medium flex justify-between items-center py-2 pl-4 pr-6 m-2 rounded-xl  bg-opacity-25  backdrop-filter backdrop-blur border border-slate-300`}
       >
         <p
           className={`${
-            isActive ? 'bg-slate-600' : 'bg-slate-200'
+            isActive ? 'bg-slate-600' : 'bg-slate-300'
           } rounded-xl px-2`}
         >
           {props.title}
@@ -24,7 +24,7 @@ export default function MenuItem(props) {
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            className="h-5 w-8 py-[1px] rounded-xl bg-slate-200"
+            className="h-5 w-8 py-[1px] rounded-xl bg-slate-300"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
