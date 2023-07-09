@@ -8,11 +8,11 @@ export default function MenuItem(props) {
       <span
         className={`${
           isActive
-            ? 'text-black bg-opacity-50'
-            : 'text-slate-800 bg-opacity-25 '
-        } flex justify-between items-center py-2 px-4 m-2 rounded-xl bg-slate-200 backdrop-filter backdrop-blur border border-slate-300`}
+            ? 'text-slate-950 border-slate-400 font-semibold'
+            : 'text-slate-800  '
+        } flex justify-between items-center py-2 pl-4 pr-6 m-2 rounded-xl bg-slate-200  bg-opacity-25  backdrop-filter backdrop-blur border border-slate-300`}
       >
-        <p className={``}>{props.title}</p>
+        <p className={`${isActive ? 'bg-slate-200 rounded-xl' : ''} px-2`}>{props.title}</p>
         {isActive ? null : (
           <svg
             viewBox="0 0 20 20"
