@@ -42,7 +42,7 @@ const JobPageMain = () => {
   });
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-24">
         <div className="xl:mx-20 mx-4 sm:mx-0">
           <section className="flex flex-column w-full rounded-2xl my-10 overflow-hidden   shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
             <div

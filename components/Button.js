@@ -13,10 +13,12 @@ const Button = (props) => {
     'px-4',
     'font-medium',
     'cursor-pointer',
-    variant === 'primary' ? 'text-xcolor-100' : 'text-slate-900',
-    variant === 'primary' ? 'bg-slate-950' : 'bg-slate-200',
-    variant === 'primary' ? 'border-slate-900' : 'border-slate-200',
-
+    variant === 'primary'
+      ? 'text-slate-200 hover:text-white'
+      : 'text-slate-900 hover:text-black',
+    variant === 'primary'
+      ? 'bg-slate-950 hover:bg-slate-900'
+      : 'bg-slate-100 hover:bg-slate-200',
     className
   );
 

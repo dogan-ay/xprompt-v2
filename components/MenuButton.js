@@ -6,7 +6,7 @@ const MenuButton = () => {
 
   return (
     <button
-      className="block rounded  p-2 text-xcolor-100 transition sm:hidden"
+      className="block rounded  p-2 text-slate-950 hover:text-slate-900 transition sm:hidden"
       onClick={() => updateMenu()}
     >
       {isMenuOpen ? (

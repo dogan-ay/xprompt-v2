@@ -1,17 +1,15 @@
 import { useLockBodyScroll } from '@uidotdev/usehooks';
 import Link from 'next/link';
+import MenuItem from './MenuItem';
 
 const Menu = () => {
   useLockBodyScroll();
 
   return (
-    <div className={`absolute left-0 h-full w-full bg-[#020620]`}>
+    <div className={`absolute left-0 h-[100vh] w-full bg-slate-200 bg-opacity-95`}>
       <div classname="flex flex-col text-white">
-        <Link href="">
-          <span className={``}>
-            <p className="text-white py-2 px-4 m-2 bg-slate-950 rounded-xl">Home</p>
-          </span>
-        </Link>
+        <MenuItem isActive={true} title={'Home'} link={'/'} />
+        <MenuItem isActive={false} title={'Jobs'} link={'/jobs'} />
       </div>
     </div>
   );
