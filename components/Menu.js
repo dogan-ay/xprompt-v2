@@ -77,7 +77,7 @@ const Menu = () => {
 
   return (
     <div
-      className={`absolute left-0 h-[100vh] w-full bg-slate-300 bg-opacity-75 backdrop-filter backdrop-blur-sm`}
+      className={`absolute left-0 h-[100vh] w-full bg-slate-200 bg-opacity-75 backdrop-filter backdrop-blur`}
     >
       <div classname="flex flex-col text-white">
         <MenuItem icon={homeIcon} isActive={true} title={'Home'} link={'/'} />

@@ -8,7 +8,11 @@ const Nav = () => {
   const { isMenuOpen, updateMenu } = useContext(JobContext);
 
   return (
-    <div className="bg-slate-100 fixed top-0 left-0 w-full z-50 bg-opacity-95 shadow-sm">
+    <div
+      className={`${
+        isMenuOpen ? '' : 'bg-opacity-95'
+      } bg-slate-100 fixed top-0 left-0 w-full z-50  shadow-sm`}
+    >
       <header className="container mx-auto">
         <nav className="xl:mx-20  mx-4 sm:mx-0 py-2 flex items-center justify-between">
           <span className="flex items-center gap-12">
