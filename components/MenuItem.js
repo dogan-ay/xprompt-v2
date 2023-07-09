@@ -7,8 +7,8 @@ export default function MenuItem(props) {
     <Link href={props.link}>
       <span
         className={`${
-          isActive ? 'text-black bg-slate-200' : 'text-slate-800'
-        } flex justify-between items-center py-2 px-4 m-2 rounded-xl`}
+          isActive ? 'text-black' : 'text-slate-800 bg-opacity-25 border border-slate-300'
+        } flex justify-between items-center py-2 px-4 m-2 rounded-xl bg-slate-200`}
       >
         <p className={``}>{props.title}</p>
       </span>
