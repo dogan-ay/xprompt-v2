@@ -13,9 +13,7 @@ const Button = (props) => {
     'px-4',
     'font-medium',
     'cursor-pointer',
-    variant === 'primary'
-      ? 'text-slate-200 hover:text-white'
-      : 'text-slate-900 hover:text-black',
+    variant === 'primary' ? 'text-white' : 'text-slate-900 hover:text-black',
     variant === 'primary'
       ? 'bg-slate-950 hover:bg-slate-900'
       : 'bg-slate-100 hover:bg-slate-200',
