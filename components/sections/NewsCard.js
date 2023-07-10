@@ -5,7 +5,7 @@ const NewsCard = () => {
   return (
     <section className="lg:mx-28 relative flex justify-around items-center my-32 py-10 sm:px-8 xl:px-32 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900">
       <div className="flex flex-col items-center sm:items-stretch gap-6 sm:w-2/4 px-8 sm:p-0">
-        <h3 className="text-2xl text-neutral-200">🌟 TALENTS</h3>
+        <h3 className="text-2xl text-neutral-200">TALENTS</h3>
         <div className="h-40 w-40 overflow-hidden sm:hidden">
           <img
             className="w-full h-full object-cover "
