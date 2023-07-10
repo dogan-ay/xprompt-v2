@@ -8,25 +8,25 @@ export default function MenuItem(props) {
       <span
         className={`${
           isActive
-            ? 'text-white border-slate-400 bg-slate-400'
-            : 'text-black bg-slate-100 bg-opacity-30'
-        }  font-medium flex justify-between items-center py-2 px-4 m-2 rounded-xl    backdrop-filter backdrop-blur-lg border border-slate-300`}
-      > <span className="flex gap-2 items-center"> 
-        {props.icon}
-        <p
-          className={`${
-            isActive ? '' : ' bg-opacity-50'
-          } text-lg rounded-xl`}
-        >
-          {props.title}
-        </p>
-      </span>
+            ? 'text-white bg-slate-500'
+            : 'text-black border border-slate-200'
+        }  font-medium flex justify-between items-center rounded-lg py-2 px-2 m-2 `}
+      >
+        {' '}
+        <span className="flex gap-2 items-center">
+          {props.icon}
+          <p
+            className={`${isActive ? '' : ' bg-opacity-50'} text-lg rounded-xl`}
+          >
+            {props.title}
+          </p>
+        </span>
         {isActive ? null : (
           <svg
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            className="h-5 w-8 py-[1px] rounded-xl bg-slate-300"
+            className="h-5 w-8 py-[1px] rounded-xl bg-slate-200"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -37,7 +37,7 @@ export default function MenuItem(props) {
             <g id="SVGRepo_iconCarrier">
               {' '}
               <path
-                stroke="currentColor"
+                stroke="#1e293b"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
