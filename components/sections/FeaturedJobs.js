@@ -6,7 +6,7 @@ import Link from 'next/link';
 const FeaturedJobs = () => {
   return (
     <section
-      className="flex flex-col w-full rounded-2xl my-10 overflow-hidden   shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+      className="flex flex-col w-full rounded-2xl my-10 overflow-hidden   shadow-[0_1px_10px_rgb(0,0,0,0.12)]
     "
     >
       <div className=" py-4 md:py-7 bg-slate-200 border-b border-gray-200">
