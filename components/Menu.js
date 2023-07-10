@@ -15,25 +15,26 @@ const Menu = () => {
     if (path === '/') {
       return '/';
     }
-  
+
     const parts = path.split('/');
-  
+
     parts.shift();
-  
+
     if (parts.length === 1) {
       return parts[0];
     }
+    return parts[0];
+  };
 
   const handleLink = (router) => {
-    const item = router.asPath
-    parsePath(item)
-    setActiveLink(item)
+    const item = parsePath(router.asPath);
+    setActiveLink(item);
   };
 
   useEffect(() => {
     console.log(router);
     console.log('calıstı aga ');
-    handleLink(router)
+    handleLink(router);
   });
 
   const jobIcon = (
@@ -53,7 +54,7 @@ const Menu = () => {
         {' '}
         <path
           d="M3 11C3 9.11438 3 8.17157 3.58579 7.58579C4.17157 7 5.11438 7 7 7H8H16H17C18.8856 7 19.8284 7 20.4142 7.58579C21 8.17157 21 9.11438 21 11V17C21 18.8856 21 19.8284 20.4142 20.4142C19.8284 21 18.8856 21 17 21H16H8H7C5.11438 21 4.17157 21 3.58579 20.4142C3 19.8284 3 18.8856 3 17V11Z"
-          stroke="#323232"
+          stroke="currentColor"
           stroke-width="2"
           stroke-linejoin="round"
         ></path>{' '}
@@ -107,16 +108,25 @@ const Menu = () => {
   );
 
   return (
-    <div className={`absolute left-0 h-[100vh] w-full bg-slate-100 `}> {activeLink}
+    <div className={`absolute left-0 h-[100vh] w-full bg-slate-100 `}>
       <div classname="flex flex-col text-white">
-        <MenuItem icon={homeIcon} isActive={true} title={'Home'} link={'/'} />
+        <MenuItem
+          icon={homeIcon}
+          isActive={activeLink === '/'}
+          title={'Home'}
+          link={'/'}
+        />
         <MenuItem
           icon={jobIcon}
-          isActive={false}
+          isActive={activeLink === 'jobs'}
           title={'Jobs'}
           link={'/jobs'}
         />
-        <MenuItem isActive={false} title={'test'} link={'/jobs'} />
+        <MenuItem
+          isActive={activeLink === 'blog'}
+          title={'Blog'}
+          link={'/blog'}
+        />
         <MenuItem isActive={false} title={'test'} link={'/jobs'} />
       </div>
     </div>

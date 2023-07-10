@@ -1,10 +1,14 @@
 import Link from 'next/link';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { JobContext } from '@/contexts/JobContext';
 
 export default function MenuItem(props) {
-  const [isActive, setIsActive] = useState(props.isActive ? true : false);
+  const [isActive, setIsActive] = useState(props.isActive);
   const { isMenuOpen, updateMenu } = useContext(JobContext);
+
+  useEffect(() => {
+    setIsActive(props.isActive);
+  }, [props.isActive]);
 
   return (
     <Link href={props.link} onClick={() => updateMenu()}>
