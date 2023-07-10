@@ -6,6 +6,7 @@ export default function MenuItem(props) {
   const [isActive, setIsActive] = useState(props.isActive);
   const { isMenuOpen, updateMenu } = useContext(JobContext);
 
+  
   useEffect(() => {
     setIsActive(props.isActive);
   }, [props.isActive]);
