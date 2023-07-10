@@ -9,10 +9,11 @@ const Button = (props) => {
     'items-center gap-2',
     'border',
     'rounded-lg',
-    'py-2',
+    'pb-[2px]',
     'px-4',
     'font-medium',
     'cursor-pointer',
+    'leading-10',
     variant === 'primary' ? 'text-white' : 'text-slate-900 hover:text-black',
     variant === 'primary'
       ? 'bg-slate-950 hover:bg-slate-900'

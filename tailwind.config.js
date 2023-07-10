@@ -29,7 +29,7 @@ module.exports = {
     },
 
     fontFamily: {
-      sans: ['PT Sans', 'Helvetica', 'Arial', 'sans-serif'],
+      sans: ['Zen Kaku Gothic New', 'Helvetica', 'Arial', 'sans-serif'],
     },
   },
   plugins: [require('tailwind-scrollbar')],
