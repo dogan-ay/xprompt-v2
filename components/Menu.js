@@ -1,9 +1,40 @@
 import { useLockBodyScroll } from '@uidotdev/usehooks';
 import Link from 'next/link';
 import MenuItem from './MenuItem';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 
 const Menu = () => {
+  const [activeLink, setActiveLink] = useState();
+
   useLockBodyScroll();
+
+  const router = useRouter();
+
+  const parsePath = (path) => {
+    if (path === '/') {
+      return '/';
+    }
+  
+    const parts = path.split('/');
+  
+    parts.shift();
+  
+    if (parts.length === 1) {
+      return parts[0];
+    }
+
+  const handleLink = (router) => {
+    const item = router.asPath
+    parsePath(item)
+    setActiveLink(item)
+  };
+
+  useEffect(() => {
+    console.log(router);
+    console.log('calıstı aga ');
+    handleLink(router)
+  });
 
   const jobIcon = (
     <svg
@@ -76,7 +107,7 @@ const Menu = () => {
   );
 
   return (
-    <div className={`absolute left-0 h-[100vh] w-full bg-slate-100 `}>
+    <div className={`absolute left-0 h-[100vh] w-full bg-slate-100 `}> {activeLink}
       <div classname="flex flex-col text-white">
         <MenuItem icon={homeIcon} isActive={true} title={'Home'} link={'/'} />
         <MenuItem
