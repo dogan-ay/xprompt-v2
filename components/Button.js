@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 
 const Button = (props) => {
-  const { children, className, variant, onClick, arrow } = props;
+  const { children, className, variant, onClick, arrow, onlyArrow } = props;
   const buttonClasses = classNames(
     'inline-flex',
     'items-center gap-2',
@@ -22,12 +22,23 @@ const Button = (props) => {
 
   return (
     <div className={buttonClasses} onClick={onClick}>
-      <p
-        className="pb-[10px]
-    pt-[8px]"
-      >
-        {children}
-      </p>
+      {onlyArrow ? (
+        <div className="py-[9px]">
+          <Image
+            src="/icons/arrow-right.svg"
+            width={16}
+            height={16}
+            alt="right arrow"
+          />
+        </div>
+      ) : (
+        <p
+          className="pb-[10px]
+     pt-[8px]"
+        >
+          {children}
+        </p>
+      )}
       {arrow ? (
         <div className="">
           <Image
@@ -45,11 +56,11 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   variant: PropTypes.oneOf(['primary', 'secondary']),
   onClick: PropTypes.func,
   arrow: PropTypes.bool,
+  onlyArrow: PropTypes.bool,
 };
 
 Button.defaultProps = {
