@@ -4,7 +4,7 @@ import Button from './Button';
 const NewsInput = (props) => {
   const onlyArrow = props.onlyArrow ?? false;
   return (
-    <div className="flex justify-between items-center p-1 border border-slate-300 rounded-lg bg-white focus-within:shadow-md hover:shadow-md">
+    <div className="flex justify-between items-center p-1 border border-slate-300 rounded-lg bg-white focus-within:border-slate-400 focus-within:shadow-sm hover:border-slate-400">
       <div className="pl-2 flex items-center w-3/4">
         <svg
           width="24px"
