@@ -28,43 +28,41 @@ const FeaturedJobs = () => {
         <JobCard />
         <JobCard />
       </div>
-      <div className="mx-auto">
-        <Link href="/">
-          <span className="flex justify-center items-center text-xl font-medium px-3 py-2 text-slate-800 hover:text-slate-900 hover:bg-slate-200 rounded-lg my-2 cursor-pointer">
-            <p className="pl-1">Search Jobs</p>
-            <svg
-              viewBox="0 0 24 24"
-              className="w-8 h-8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
+      <Link href="/">
+        <span className="flex justify-center items-center text-xl font-medium  text-slate-800 hover:text-slate-900 hover:bg-slate-200 rounded-lg m-2 py-3 cursor-pointer">
+          <p className="pl-1">Search Jobs</p>
+          <svg
+            viewBox="0 0 24 24"
+            className="w-8 h-8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {' '}
+              <path
+                d="M16 12L8 12"
+                stroke="#334155"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {' '}
-                <path
-                  d="M16 12L8 12"
-                  stroke="#334155"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>{' '}
-                <path
-                  d="M13 15L15.913 12.087V12.087C15.961 12.039 15.961 11.961 15.913 11.913V11.913L13 9"
-                  stroke="#334155"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>{' '}
-              </g>
-            </svg>
-          </span>
-        </Link>
-      </div>
+              ></path>{' '}
+              <path
+                d="M13 15L15.913 12.087V12.087C15.961 12.039 15.961 11.961 15.913 11.913V11.913L13 9"
+                stroke="#334155"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>{' '}
+            </g>
+          </svg>
+        </span>
+      </Link>
     </section>
   );
 };
