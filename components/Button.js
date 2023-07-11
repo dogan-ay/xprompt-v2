@@ -33,7 +33,7 @@ const Button = (props) => {
         </div>
       ) : (
         <p
-          className="pb-[10px]
+          className="pb-[11px]
      pt-[8px]"
         >
           {children}
