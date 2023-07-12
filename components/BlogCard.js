@@ -23,7 +23,7 @@ const BlogCard = () => {
         </div>
         <p className="text-sm sm:block hidden lg:w-60 md:w-96 sm:w-60 text-slate-700 group-hover:text-slate-800">
           Lorem İpsum dolor site amet. Lorem İpsum dolor site amet. Lorem İpsum
-          dolor site amet. Lorem İpsum dolor.
+          dolor site amet. Lorem İpsum dolor..
         </p>
       </div>
     </article>
