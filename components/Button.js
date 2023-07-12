@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Image from 'next/image';
+import { RightArrow } from './icons/RightArrow';
 
 const Button = (props) => {
   const { children, className, variant, onClick, arrow, onlyArrow } = props;
@@ -23,13 +24,8 @@ const Button = (props) => {
   return (
     <div className={buttonClasses} onClick={onClick}>
       {onlyArrow ? (
-        <div className="py-[9px]">
-          <Image
-            src="/icons/arrow-right.svg"
-            width={16}
-            height={16}
-            alt="right arrow"
-          />
+        <div className="py-[11px]">
+          <RightArrow />
         </div>
       ) : (
         <p
