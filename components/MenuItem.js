@@ -6,7 +6,6 @@ export default function MenuItem(props) {
   const [isActive, setIsActive] = useState(props.isActive);
   const { isMenuOpen, updateMenu } = useContext(JobContext);
 
-  
   useEffect(() => {
     setIsActive(props.isActive);
   }, [props.isActive]);
@@ -24,7 +23,9 @@ export default function MenuItem(props) {
         <span className="flex gap-2 items-center">
           {props.icon}
           <p
-            className={`${isActive ? '' : ' bg-opacity-50'} text-lg rounded-xl`}
+            className={`${
+              isActive ? '' : ' bg-opacity-50'
+            } text-lg rounded-xl leading-none pb-[3px]`}
           >
             {props.title}
           </p>

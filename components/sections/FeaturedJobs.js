@@ -7,18 +7,10 @@ import Image from 'next/image';
 const FeaturedJobs = () => {
   return (
     <section
-      className="flex flex-col w-full rounded-2xl my-10 overflow-hidden   shadow-[0_1px_10px_rgb(0,0,0,0.12)]
+      className="flex flex-col w-full rounded-2xl my-10 overflow-hidden   shadow-[0_1px_4px_rgb(0,0,0,0.1)]
     "
     >
-      <div className=" py-4 md:py-7 bg-slate-200 border-b border-gray-200">
-        <div className=" justify-center hidden md:flex flex-wrap gap-8 gap-y-4 md:gap-10">
-          <NeuButton name={'prompter'} href={'/'} />
-          <NeuButton name={'prompter'} href={'/'} />
-          <NeuButton name={'prompter'} href={'/'} />
-          <NeuButton name={'prompter'} href={'/'} />
-          <NeuButton name={'prompter'} href={'/'} />
-        </div>
-      </div>
+      <div className=" py-4 bg-slate-200 border-b border-gray-200"></div>
       <div className="bg-white flex flex-wrap border-l border-gray-200">
         <JobCard />
         <JobCard />
