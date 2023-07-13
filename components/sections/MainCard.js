@@ -3,11 +3,11 @@ import Image from 'next/image';
 export const MainCard = () => {
   return (
     <section className="w-full bg-slate-900">
-      <div className="max-w-lg mx-auto text-center flex flex-col gap-8 py-20 mb-10">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-200 via-sky-300 to-blue-500 bg-clip-text text-transparent">
+      <div className="max-w-lg mx-auto text-center flex flex-col gap-8 py-20 mb-10 px-4 sm:px-0">
+        <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-green-200 via-sky-300 to-blue-500 bg-clip-text text-transparent">
           Lorem ipsum dolor sit. Lorem ipsum amet.
         </h1>
-        <p className="text-xl font-medium text-slate-300">
+        <p className="text-lg sm:text-xl font-medium text-slate-300">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
           illo tenetur fuga ducimus numquam ea!
         </p>

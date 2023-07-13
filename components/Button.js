@@ -9,7 +9,6 @@ const Button = (props) => {
   const buttonClasses = classNames(
     'inline-flex',
     'items-center gap-2',
-    'border',
     'rounded-lg',
     'px-4',
     'font-medium',
