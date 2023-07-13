@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlogCard = () => {
   return (
-    <article className="flex flex-col   sm:m-0 sm:flex-row sm:items-center sm:gap-10 rounded-2xl bg-white p-3 sm:w-full hover:bg-slate-50 hover:shadow-[rgba(0,_0,_0,_0.10)_0px_3px_8px] transition group cursor-pointer">
+    <article className="flex flex-col   sm:m-0 sm:flex-row sm:items-center sm:gap-10 rounded-2xl bg-white p-3 sm:w-full transition group cursor-pointer hover:scale-[1.01] border border-slate-100">
       <div className="sm:h-72 aspect-square sm:max-h-72 w-full sm:w-64 rounded-2xl overflow-hidden">
         <img
           className="w-full h-full object-cover"
