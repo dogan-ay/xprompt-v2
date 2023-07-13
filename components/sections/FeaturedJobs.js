@@ -23,7 +23,7 @@ const FeaturedJobs = () => {
       </div>
       <Link href="/">
         <span className="flex justify-center items-center text-xl font-medium  text-slate-800 hover:text-slate-900 hover:bg-slate-200 rounded-lg m-2 py-3 cursor-pointer">
-          <p className="pb-[5px]">Search Jobs</p>
+          <p className="pb-[5px] pr-1">Search Jobs</p>
           <Image
             src="/icons/chevron-right.svg"
             width={16}

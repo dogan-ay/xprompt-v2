@@ -10,15 +10,19 @@ import NewsCard from '@/components/sections/NewsCard';
 import { MainCard } from '@/components/sections/MainCard';
 export default function Home() {
   return (
-    <div className="container mx-auto">
-      <div className="xl:mx-20 mx-4 sm:mx-0">
+    <>
+      <div className="container mx-auto">
         <HeroSection />
         <SectionTitle
           title={'🔥 Featured Jobs'}
           subtitle={'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'}
         />
         <FeaturedJobs />
-        <MainCard />
+      </div>
+
+      <MainCard />
+
+      <div className="container mx-auto">
         <SectionTitle
           title={'🌈 Latest Articles'}
           subtitle={'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'}
@@ -26,6 +30,6 @@ export default function Home() {
         <HomeBlogPosts />
         <NewsCard />
       </div>
-    </div>
+    </>
   );
 }
