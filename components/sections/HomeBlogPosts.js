@@ -11,7 +11,19 @@ const HomeBlogPosts = () => {
   return (
     <>
       {isMobile ? (
-        <Swiper></Swiper>
+        <div className="w-full  my-10">
+          <Swiper classname="w-full" slidesPerView={2.2} spaceBetween={20}>
+          <SwiperSlide>
+            <BlogCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <BlogCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <BlogCard />
+          </SwiperSlide>
+        </Swiper>
+        </div>
       ) : (
         <section className="lg:grid lg:grid-cols-2 lg:gap-10 flex flex-col gap-8 my-10">
           <BlogCard />
