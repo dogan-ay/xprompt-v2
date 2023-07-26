@@ -6,4 +6,12 @@
   .primary-gradient {
     @apply bg-gradient-to-r from-green-200 via-sky-300 to-blue-500;
   }
+
+  .big-title {
+    @apply text-5xl sm:text-6xl font-bold;
+  }
+
+  .title {
+    @apply text-4xl sm:text-5xl font-extrabold;
+  }
 }

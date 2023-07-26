@@ -2,8 +2,8 @@ import React from 'react';
 
 const BlogCard = () => {
   return (
-    <article className="flex flex-col   sm:m-0 sm:flex-row sm:items-center sm:gap-10 rounded-2xl bg-white p-3 sm:w-full transition group cursor-pointer hover:scale-[1.01] border border-slate-200">
-      <div className="sm:h-72 aspect-square sm:max-h-72 w-full sm:w-64 rounded-2xl overflow-hidden">
+    <article className="flex flex-col w-1/2 sm:w-full  sm:m-0 sm:flex-row sm:items-center sm:gap-10 rounded-2xl bg-white p-3 sm:w-full transition group cursor-pointer hover:scale-[1.01] border border-slate-200">
+      <div className="sm:h-72 aspect-square sm:max-h-72 sm:w-64 rounded-2xl overflow-hidden">
         <img
           className="w-full h-full object-cover"
           src="https://i.pinimg.com/736x/93/34/a0/9334a0802fc144fba9e7a9eba9f198ac.jpg"

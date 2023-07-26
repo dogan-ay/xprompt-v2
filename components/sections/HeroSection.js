@@ -6,8 +6,8 @@ const HeroSection = () => {
   return (
     <section className="flex justify-around items-center gap-8 lg:gap-0 flex-col-reverse my-20 lg:flex-row">
       <div className="max-w-lg flex flex-col gap-7 ">
-        <h1 className="text-4xl sm:text-6xl font-bold text-xcolor-900 sm:leading-tight">
-          Lorem Ipsum Dolor Sıt Amet
+        <h1 className="big-title text-xcolor-900 sm:leading-tight">
+          Lorem Ipsum Dolor Amei Sıt Amet
         </h1>
         <p className="text-xl sm:text-2xl text-xcolor-700">
           Lorem ipsum dolor amei sit amet! Lorem ipsum dolor amei sit amet!
