@@ -8,14 +8,17 @@ import 'swiper/css';
 const HomeBlogPosts = () => {
   const { isMobile } = useContext(JobContext);
   const breakpoints = {
+    625: {
+      slidesPerView: 3.1,
+    },
     575: {
-      slidesPerView: 2.8,
+      slidesPerView: 2.9,
     },
     525: {
-      slidesPerView: 2.6,
+      slidesPerView: 2.7,
     },
     475: {
-      slidesPerView: 2.4,
+      slidesPerView: 2.5,
     },
     425: {
       slidesPerView: 2.2,
@@ -48,6 +51,15 @@ const HomeBlogPosts = () => {
             slidesPerView={1}
             breakpoints={breakpoints}
           >
+            <SwiperSlide>
+              <BlogCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogCard />
+            </SwiperSlide>
             <SwiperSlide>
               <BlogCard />
             </SwiperSlide>
