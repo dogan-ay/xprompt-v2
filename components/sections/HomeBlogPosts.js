@@ -1,21 +1,33 @@
-import React from 'react'
-import BlogCard from '../BlogCard'
-import Button from '../Button'
+import { React, useContext } from 'react';
+import BlogCard from '../BlogCard';
+import Button from '../Button';
+import { JobContext } from '@/contexts/JobContext';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 const HomeBlogPosts = () => {
+  const { isMobile } = useContext(JobContext);
+
   return (
     <>
-    <section className='lg:grid lg:grid-cols-2 lg:gap-10 flex flex-col gap-8 my-10'>
-        <BlogCard/>
-        <BlogCard/>
-        <BlogCard/>
-        <BlogCard/>
-    </section>
-    <div className='flex justify-center pt-4'>
-      <Button variant='secondary' arrow={true}>View All Posts</Button>
-    </div>
-    </>
-  )
-}
+      {isMobile ? (
+        <Swiper></Swiper>
+      ) : (
+        <section className="lg:grid lg:grid-cols-2 lg:gap-10 flex flex-col gap-8 my-10">
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+        </section>
+      )}
 
-export default HomeBlogPosts
+      <div className="flex justify-center pt-4">
+        <Button variant="secondary" arrow={true}>
+          View All Posts
+        </Button>
+      </div>
+    </>
+  );
+};
+
+export default HomeBlogPosts;
