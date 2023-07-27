@@ -8,7 +8,7 @@
   }
 
   .big-title {
-    @apply text-5xl lg:text-6xl font-bold;
+    @apply text-4xl lg:text-6xl font-bold;
   }
 
   .title {

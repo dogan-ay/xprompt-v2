@@ -5,11 +5,11 @@ const HeroSection = () => {
   const { isMobile } = useContext(JobContext);
   return (
     <section className="flex justify-around items-center gap-8 lg:gap-0 flex-col-reverse my-20 md:flex-row relative">
-      <div className="max-w-lg flex flex-col gap-7 absolute bottom-0 md:static bg-slate-100 md:bg-transparent bg-opacity-25 md:bg-opacity-100 backdrop backdrop-blur-sm md:backdrop-blur-none">
+      <div className="max-w-lg flex flex-col gap-3 md:gap-7 absolute bottom-0 md:static bg-slate-100 md:bg-transparent bg-opacity-25 md:bg-opacity-100 backdrop backdrop-blur-sm md:backdrop-blur-none">
         <h1 className="big-title text-xcolor-900 sm:leading-tight">
           Lorem Ipsum Dolor Amei Sıt Amet
         </h1>
-        <p className="text-xl sm:text-2xl text-xcolor-700">
+        <p className="text-xl md:text-2xl text-xcolor-700">
           Lorem ipsum dolor amei sit amet! Lorem ipsum dolor amei sit amet!
         </p>
         {isMobile ? <NewsInput onlyArrow={true} /> : <NewsInput />}
