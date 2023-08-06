@@ -14,10 +14,12 @@ export default function MenuItem(props) {
     <Link href={props.link} onClick={() => updateMenu()}>
       <span
         className={`${
-          isActive
-            ? 'text-white bg-slate-500'
-            : 'text-black border border-slate-200'
-        }  font-medium flex justify-between items-center rounded-lg py-2 px-2 m-2 `}
+          props.link == '/post'
+            ? 'bg-slate-900 text-cyan-400'
+            : isActive
+            ? ' bg-slate-200 border-transparent'
+            : '  border-slate-200 '
+        }  font-medium text-black flex justify-between items-center rounded-lg py-3 px-2 m-2 border `}
       >
         {' '}
         <span className="flex gap-2 items-center">
@@ -35,7 +37,9 @@ export default function MenuItem(props) {
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            className="h-5 w-8 py-[1px] rounded-xl bg-slate-200"
+            className={`h-5 w-8 py-[1px] rounded-xl ${
+              props.link == '/post' ? 'bg-transparent' : 'bg-slate-200'
+            }`}
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -46,7 +50,7 @@ export default function MenuItem(props) {
             <g id="SVGRepo_iconCarrier">
               {' '}
               <path
-                stroke="#1e293b"
+                stroke={`${props.link == '/post' ? '#22d3ee' : '#1e293b'}`}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"

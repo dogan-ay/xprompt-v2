@@ -79,9 +79,9 @@ const Menu = () => {
         />
         <MenuItem
           icon={postIcon}
-          isActive={false}
+          isActive={activeLink === 'post'}
           title={'Post a Job'}
-          link={'/'}
+          link={'/post'}
         />
       </div>
     </div>
