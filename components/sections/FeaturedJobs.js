@@ -10,7 +10,7 @@ const FeaturedJobs = () => {
       className="flex flex-col w-full rounded-2xl my-10 overflow-hidden   shadow-[0_1px_4px_rgb(0,0,0,0.1)]
     "
     >
-      <div className=" py-4 bg-slate-200 border-b border-gray-200"></div>
+      <div className=" py-2 bg-slate-200 border-b border-gray-200"></div>
       <div className="bg-white flex flex-wrap border-l border-gray-200">
         <JobCard />
         <JobCard />
