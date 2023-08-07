@@ -1,5 +1,5 @@
-import JobPageMain from '@/components/jobSections/JobPageMain';
+import JobMobile from '@/components/jobSections/JobMobile';
 
 export default function () {
-  return <JobPageMain />;
+  return <JobMobile />;
 }

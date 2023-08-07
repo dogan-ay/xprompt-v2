@@ -54,7 +54,7 @@ const JobPageMain = () => {
             >
               {fakeData.map((item) => (
                 <Link
-                  href={`/jobs/${item.id}`}
+                  href={`${isMobile ? '/jobs/' + item.id : '#'}`}
                   onClick={() => {
                     updateCurrentJob(item.id);
                     updateShowJob(true);
@@ -66,7 +66,7 @@ const JobPageMain = () => {
                 </Link>
               ))}
             </div>
-            {isMobile ? <JobMobile /> : <JobWeb />}
+            {isMobile ? '' : <JobWeb />}
           </section>
         </div>
       </div>
