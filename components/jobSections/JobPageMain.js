@@ -46,9 +46,9 @@ const JobPageMain = () => {
         <div className="xl:mx-20 mx-4 sm:mx-0">
           <section className="flex flex-column w-full rounded-2xl my-10 overflow-hidden   shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
             <div
-              className={`${
-                isShowJob ? 'hidden sm:flex flex-col' : 'flex flex-col'
-              } bg-white w-full sm:w-1/2 border-l border-gray-200 sm:max-h-[90vh] sm:overflow-y-scroll 
+              className={`
+               flex flex-col
+               bg-white w-full sm:w-1/2 border-l border-gray-200 sm:max-h-[90vh] sm:overflow-y-scroll 
               scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-slate-50
               `}
             >
@@ -57,7 +57,6 @@ const JobPageMain = () => {
                   href={`${isMobile ? '/jobs/' + item.id : '#'}`}
                   onClick={() => {
                     updateCurrentJob(item.id);
-                    updateShowJob(true);
                   }}
                 >
                   <div key={item.id} id={item.id}>

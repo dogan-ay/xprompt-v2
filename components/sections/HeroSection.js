@@ -15,9 +15,10 @@ const HeroSection = () => {
         </p>
         {isMobile ? <NewsInput onlyArrow={true} /> : <NewsInput />}
       </div>
-      <div className="aspect-ratio-4/3 max-w-[200px] md:w-auto md:max-w-xs mt-8 md:mt-0">
+      <div className="relative aspect-ratio-4/3 max-w-[200px] md:w-auto md:max-w-xs mt-8 md:mt-0">
+        <div class="absolute opacity-50 -inset-px primary-gradient rounded-[50px] blur-lg"></div>
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover relative"
           src="https://raw.githubusercontent.com/dogan-ay/xprompt-v2/main/public/hero2.png"
         ></img>
       </div>
