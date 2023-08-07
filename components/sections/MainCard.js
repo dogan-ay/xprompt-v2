@@ -11,7 +11,7 @@ export const MainCard = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
           illo tenetur fuga ducimus numquam ea!
         </p>
-        <span className="flex items-center justify-center text-xl font-medium  text-cyan-400 cursor-pointer py-2 px-5 rounded-xl w-fit mx-auto border border-cyan-400">
+        <span className="flex items-center justify-center text-lg sm:text-xl font-medium  text-cyan-400 cursor-pointer sm:py-2 py-1.5 px-3 sm:px-5 rounded-xl w-fit mx-auto border border-cyan-400">
           <p className="pb-[5px] pr-1">Post a Job</p>
           <span>
             <svg

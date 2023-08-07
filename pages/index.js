@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <div className="container mx-auto">
-        <div className="mx-4 md:m-0">
+        <div className="mx-4 sm:m-0">
           <HeroSection />
           <SectionTitle
             title={'🔥 Featured Jobs'}
@@ -29,8 +29,15 @@ export default function Home() {
           title={'🌈 Latest Articles'}
           subtitle={'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'}
         />
-        <HomeBlogPosts />
-        <NewsCard />
+        <div className="ml-4 sm:m-0">
+          <HomeBlogPosts />
+        </div>
+      </div>
+
+      <div className="container mx-auto">
+        <div className="mx-4 sm:m-0">
+          <NewsCard />
+        </div>
       </div>
     </>
   );
