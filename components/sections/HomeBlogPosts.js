@@ -80,7 +80,7 @@ const HomeBlogPosts = () => {
         </section>
       )}
 
-      <div className="flex justify-center pt-4">
+      <div className="flex justify-center pb-4">
         <Button variant="secondary" arrow={true}>
           View All Posts
         </Button>
