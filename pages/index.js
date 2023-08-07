@@ -12,12 +12,14 @@ export default function Home() {
   return (
     <>
       <div className="container mx-auto">
-        <HeroSection />
-        <SectionTitle
-          title={'🔥 Featured Jobs'}
-          subtitle={'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'}
-        />
-        <FeaturedJobs />
+        <div className="mx-4 md:m-0">
+          <HeroSection />
+          <SectionTitle
+            title={'🔥 Featured Jobs'}
+            subtitle={'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'}
+          />
+          <FeaturedJobs />
+        </div>
       </div>
 
       <MainCard />
