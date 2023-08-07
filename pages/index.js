@@ -23,12 +23,16 @@ export default function Home() {
       </div>
 
       <MainCard />
-
       <div className="container mx-auto">
-        <SectionTitle
+        <div className="mx-4 sm:m-0">
+      <SectionTitle
           title={'🌈 Latest Articles'}
           subtitle={'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'}
         />
+        </div>
+                </div>
+
+      <div className="container mx-auto">
         <div className="ml-4 sm:m-0">
           <HomeBlogPosts />
         </div>
