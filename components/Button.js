@@ -23,7 +23,7 @@ const Button = (props) => {
   return (
     <div className={buttonClasses} onClick={onClick}>
       {onlyArrow ? (
-        <div className="py-[11px]">
+        <div className="py-[11px] stroke-none">
           <RightArrow />
         </div>
       ) : (
