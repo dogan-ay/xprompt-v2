@@ -3,6 +3,7 @@ import Button from './Button';
 import Menu from './Menu';
 import MenuButton from './MenuButton';
 import { JobContext } from '@/contexts/JobContext';
+import Link from 'next/link';
 
 const Nav = () => {
   const { isMenuOpen, updateMenu } = useContext(JobContext);
@@ -18,17 +19,23 @@ const Nav = () => {
           <span className="flex items-center gap-12">
             <h1 className="text-2xl text-slate-900">Xprompt |</h1>
             <span className=" gap-4 text-base text-slate-700 font-medium hidden sm:flex">
-              <a href="/" className="text-black">
-                Jobs
-              </a>
-              <a href="/">Blog</a>
+              <Link href="/jobs">
+                <p className="text-black">Jobs</p>
+              </Link>
+              <Link href="/blog">
+                <p className="text-black">Blog</p>
+              </Link>
             </span>
           </span>
           <span className="flex gap-5">
-            <Button variant="secondary" className="sm:block hidden">
-              Get Job Alerts
-            </Button>
-            <Button className="hidden sm:block">Post a Job</Button>
+            <Link href="/newsletter">
+              <Button variant="secondary" className="sm:block hidden">
+                Get Job Alerts
+              </Button>
+            </Link>
+            <Link href="/post">
+              <Button className="hidden sm:block">Post a Job</Button>
+            </Link>
             <MenuButton />
           </span>
         </nav>
