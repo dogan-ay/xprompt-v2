@@ -75,7 +75,7 @@ const Menu = () => {
           icon={getIcon}
           isActive={false}
           title={'Get Job Alerts'}
-          link={'/'}
+          link={'/newsletter'}
         />
         <MenuItem
           icon={postIcon}
