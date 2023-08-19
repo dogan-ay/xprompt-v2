@@ -16,7 +16,7 @@ const HeroSection = () => {
         {isMobile ? <NewsInput onlyArrow={true} /> : <NewsInput />}
       </div>
       <div className="relative aspect-ratio-4/3 max-w-[200px] md:w-auto md:max-w-[270px] lg:max-w-xs mt-8 md:mt-0">
-        <div class="sm:hidden absolute opacity-50 -inset-px primary-gradient rounded-[50px] blur-lg"></div>
+        <div class="sm:hidden absolute opacity-50 -inset-px secondary-gradient rounded-[50px] blur-lg"></div>
         <img
           className="w-full h-full object-cover relative"
           src="https://raw.githubusercontent.com/dogan-ay/xprompt-v2/main/public/hero2.png"
